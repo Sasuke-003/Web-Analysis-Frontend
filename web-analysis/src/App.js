@@ -9,7 +9,7 @@ class App extends Component{
   return (
     <BrowserRouter>
       <div className="App">
-        <Login />
+        <HospitalSignup />
       </div>
     </BrowserRouter>
     );

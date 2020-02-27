@@ -11,10 +11,8 @@ class HospitalSignup extends Component{
 	}
 	onChange = (e) => {
 		this.setState({
-            [e.target.id]: e.target.value
-		})
-		console.log(e.target.value);
-		console.log(e.target.id);
+			[e.target.id]:e.target.value
+		});
 	}
 	onSubmit = (e) => {
 		e.preventDefault();
@@ -64,39 +62,39 @@ class HospitalSignup extends Component{
 
     render(){
         return(
-             <div className="container">
-			// 	<div className="d-flex justify-content-center h-100">
-			// 		<div className="card">
-			// 			<div className="card-header">
-			// 				<h3>Hospital Sign Up</h3>
-			// 			</div>
-			// 			<div className="card-body">
-			// 				<form onSubmit={this.onSubmit}>
-			// 					<div className="input-group form-group">
-			// 				       <input type="text" className="form-control" onChange={this.onChange} placeholder="Username"  required/>
+            <div className="container">
+				<div className="d-flex justify-content-center h-100">
+					<div className="card">
+						<div className="card-header">
+							<h3>Hospital Sign Up</h3>
+						</div>
+						<div className="card-body">
+							<form onSubmit={this.onSubmit}>
+								<div className="input-group form-group">
+							       <input type="text" className="form-control" onChange={this.onChange} placeholder="HospitalName" id="username" required/>
 						
-            //         			</div>
-            //         			<div className="input-group form-group">
-			// 					    <input type="text" className="form-control" onChange={this.onChange}  placeholder="Email"   required/>
-			// 					</div>
-            //         			<div className="input-group form-group">
-			// 						<input type="text" className="form-control" onChange={this.onChange}  placeholder="Contact" id="contact"  required/>
-			// 					</div>
-			// 					<div className="input-group form-group">
-			// 						<input type="password" className="form-control" onChange={this.onChange}  placeholder="Password"   required/>
-			// 					</div>
-            //         			<div className="input-group form-group">
-			// 						<input type="text" className="form-control" onChange={this.onChange}  placeholder="Confirm Password"  id="cpassword"  required/>
-			// 					</div>
-			// 					<br />
-			// 					<div className="form-group">
-			// 						<input type="submit" value="Sign Up" className="btn float-right login_btn" id="login_btn"/>
-			// 					</div>
-			// 				</form>
-			// 			</div>
-			// 		</div>
-			// 	</div>
-			 </div>
+                    			</div>
+                    			<div className="input-group form-group">
+								    <input type="text" className="form-control" onChange={this.onChange}  placeholder="Email" id="email"  required/>
+								</div>
+                    			<div className="input-group form-group">
+									<input type="text" className="form-control" onChange={this.onChange}  placeholder="Contact" id="contact"  required/>
+								</div>
+								<div className="input-group form-group">
+									<input type="password" className="form-control" onChange={this.onChange}  placeholder="Password" id="password"  required/>
+								</div>
+                    			<div className="input-group form-group">
+									<input type="text" className="form-control" onChange={this.onChange}  placeholder="Confirm Password"  id="cpassword"  required/>
+								</div>
+								<br />
+								<div className="form-group">
+									<input type="submit" value="Sign Up" className="btn float-right login_btn" id="login_btn"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
         )
     }
 }

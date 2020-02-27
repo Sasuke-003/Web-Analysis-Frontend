@@ -11,8 +11,6 @@ class Login extends Component{
 		this.setState({
             [e.target.id]: e.target.value
 		});
-		console.log(e.target.value);
-		console.log(e.target.id);
 	}
 	handleSubmit = (e) => {
 		e.preventDefault();
@@ -24,7 +22,7 @@ class Login extends Component{
 		axios.post("http://192.168.71.48:9999/user/login",user).then(res => {
 			if(res.data.code === 200 ){
 				this.setState({
-					token : res.data.token
+					token : res.data.data.token
 				});
 				console.log(this.state.token);
 			}	
