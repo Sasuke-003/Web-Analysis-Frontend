@@ -7,3 +7,5 @@ class AcceptedRequest extends Component {
         )
     }
 }
+
+export default AcceptedRequest;
