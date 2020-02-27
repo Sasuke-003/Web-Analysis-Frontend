@@ -17,7 +17,7 @@ class HospitalSignup extends Component{
 	onSubmit = (e) => {
 		e.preventDefault();
 		
-		if(false){
+		if(this.state.username.length < 3){
 			console.log(this.state.username)
 			alert("username must more than 3 characters");
 		}
@@ -25,7 +25,7 @@ class HospitalSignup extends Component{
 			alert("email must be valid");
 		}
 		else if(this.state.contact.length != 10){
-			alert("email must be contact");
+			alert("contact must be 10 numbers");
 		}
 		else if(this.state.cpassword != this.state.password){
 			alert("Both passwords must be same");
@@ -33,10 +33,10 @@ class HospitalSignup extends Component{
 		else
 		{
 			const  user  = {
-				username:this.state.username,
+				name:this.state.username,
 				email:this.state.email,
 				contact:this.state.contact,
-				cpassword:this.state.cpassword,
+				type:"h",
 				password:this.state.password
 			};
 			this.setState({		
@@ -48,11 +48,10 @@ class HospitalSignup extends Component{
 			});
 			axios.post("http://192.168.71.48:9999/user/signup",user).then(res => {
 				if(res.data.code === 200 ){
-					window.location = "/"
-					console.log(this.state.token);
+					window.location = "/Login";
 				}	
 				else{
-					alert("");
+					alert("some error occured");
 				}
 			}).catch(error => {
 				console.log(error);
