@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
+import Login from './components/Login'
+
 
 class App extends Component{
   render(){
   return (
     <BrowserRouter>
       <div className="App">
+        <Login />
       </div>
     </BrowserRouter>
     );
   }
 }
 
-export default connect()(App);
+export default App;
