@@ -7,3 +7,5 @@ class UserNavbar extends Component {
         )
     }
 }
+
+export default UserNavbar;

@@ -7,3 +7,5 @@ class DonationRequest extends Component {
         )
     }
 }
+
+export default DonationHistory;

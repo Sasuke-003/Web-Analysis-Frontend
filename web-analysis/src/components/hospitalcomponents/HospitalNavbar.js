@@ -7,3 +7,5 @@ class hospitalNavbar extends Component {
         )
     }
 }
+
+export default HospitalNavbar;

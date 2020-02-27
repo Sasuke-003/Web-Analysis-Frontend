@@ -7,3 +7,5 @@ class MyDonation extends Component {
         )
     }
 }
+
+export default MyDonation;

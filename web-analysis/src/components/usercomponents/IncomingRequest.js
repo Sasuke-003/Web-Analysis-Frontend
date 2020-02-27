@@ -7,3 +7,5 @@ class IncomingRequest extends Component {
         )
     }
 }
+
+export default IncomingRequest;

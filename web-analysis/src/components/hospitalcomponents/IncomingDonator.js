@@ -7,3 +7,6 @@ class IncomingDonator extends Component {
         )
     }
 }
+
+
+export default IncomingDonator;

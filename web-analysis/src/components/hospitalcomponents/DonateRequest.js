@@ -7,3 +7,6 @@ class DonateRequest extends Component {
         )
     }
 }
+
+
+export default DonateRequest;

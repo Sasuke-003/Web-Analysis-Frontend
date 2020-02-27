@@ -7,3 +7,5 @@ class Donate extends Component {
         )
     }
 }
+
+export default Donate;
