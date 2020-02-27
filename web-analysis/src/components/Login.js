@@ -11,10 +11,10 @@ class Login extends Component{
 			    		<div className="card-body">
 							<form>
 								<div className="input-group form-group">
-									<input type="text" className="form-control" placeholder="Username" />
+									<input type="text" className="form-control" placeholder="Username" required/>
 								</div>
 								<div className="input-group form-group">
-									<input type="password" className="form-control"  placeholder="Password"/>
+									<input type="password" className="form-control"  placeholder="Password" required/>
 								</div>
 								<div className="form-group">
 									<input type="submit" value="Login" className="btn float-right login_btn" />
