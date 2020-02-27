@@ -1,6 +1,43 @@
 import React,{ Component } from "react";
-
+import axios from 'axios'
 class Login extends Component{
+	state ={
+		email:null,
+		password:null,
+		token : null
+	}
+	handleChange = (e) => {
+		this.setState({
+			[e.target.id] :  e.target.value
+		})
+	}
+	handleSubmit = (e) => {
+		e.preventdefault();
+		const  user  = {
+			email:this.state.email,
+			password:this.state.password
+		};
+		this.setState({
+			email : null,
+			password : null,
+			token : null
+		});
+		axios.post("http://192.168.42.220:9999/user/login",user).then(res => {
+			if(res.data.code === 200 ){
+				this.setState({
+					token : res.data.token
+				});
+				console.log(this.state.token);
+			}	
+			else{
+				alert("Invalid Email or Password");
+			}
+		}).catch(error => {
+			console.log(error);
+		})
+
+
+	}
     render() {
         return(     
                 <div className="d-flex justify-content-center h-100">
@@ -9,15 +46,15 @@ class Login extends Component{
 				    		<h3>Sign In</h3>
 			        	</div>
 			    		<div className="card-body">
-							<form>
+							<form onSubmit={this.handleSubmit}>
 								<div className="input-group form-group">
-									<input type="text" className="form-control" placeholder="Username" />
+									<input type="text" className="form-control" id="email" placeholder="Email" onChange={this.handleChange}/>
 								</div>
 								<div className="input-group form-group">
-									<input type="password" className="form-control"  placeholder="Password"/>
+									<input type="password" className="form-control"  id="password" placeholder="Password" onChange={this.handleChange}/>
 								</div>
 								<div className="form-group">
-									<input type="submit" value="Login" className="btn float-right login_btn" />
+									<input type="submit" value="Login" className="btn float-right login_btn" id="login_btn"/>
 								</div>
 							</form>
 						</div>
