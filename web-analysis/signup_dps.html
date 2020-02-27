@@ -1,105 +1,81 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<!---*************welcome this is my simple empty strap by John Niro Yumang ******************* -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <style>
+            #name1,#name2,#name3,#name4,#name5{
+                width: 400px;
+				height:30px;
+				font-family: 'Times New Roman';
+				font-style: bold;
+				font-size: 20px;
+            }
+            #submit1{
+                width: 100px;
+				height:50px;
+				background-color: orange;
+            }
+             #container{
+                text-align: center;
+                display: inline-block;
+                position: absolute;
+                top: 10%;
+                left: 35%;
+			}
+			body{
+				background-image: url('/Photos/crsl1.jpg');
+				background-size: cover;
+				background-repeat: no-repeat;
+				height: 100%;
+				font-family: 'Numans', sans-serif;
+			}
+        </style> 
+        <title>Donate Request</title></head>
+    <body>
+        <form action="" method="post"> 
+        <div id=container>
+            <h1 style="color:blue;">Donate Request</h1>
+			<br>
+	<input style="color:red" type="text" id="name1"  name="name" value="" placeholder="Enter Blood Type" required> <br></p>
+	 <input style="color:red" type="text" id="name2" name="phone" placeholder="Enter Search distance" required><br></p>	
+	   <input style="color:red" type="text" id="name3" name="address" placeholder="Enter Time" required><br></p>
+        <input style="color:red" type="text" id="name4" name="email" placeholder="Enter Amount" required><br></p><br>
+        <button style="color:black;font-size:20px;" type="submit"id="submit1">Send</button>
+    </div>
+</form>
+                  
+        <script type="text/javascript">         //if not empty calling
+         
+            document.getElementById("submit1").onclick = function () {
+                 //Opening another page
+                 
 
-	<title>Sign up facundo farm & resort</title>
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                location.href = "hospitallogin.html";
+            };
+            document.getElementById("submit2").onclick = function () { //Opening another page
+                
+                let name=document.getElementById("name1").textContent;
+                let phno=document.getElementById("name2").textContent;
+                let email=document.getElementById("name4").textContent;
+                let pass=document.getElementById("name5").textContent;
+                let rpass=document.getElementById("name6").textContent;
+                if(name.length>4)
+                    alert("name must be more than 4 characters");
+                    
+                else if(phno.length!=10)
+                    alert("phone number must be of 10 digits");
+                else
+                location.href = "hospitallogin.html";
 
-	<head>
-		<script src="jquery/jquery.min.js"></script>
-		<!---- jquery link local dont forget to place this in first than other script or link or may not work ---->
-		
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<!---- boostrap.min link local ----->
-		
-		<link rel="stylesheet" href="css/style.css">
-		<!---- boostrap.min link local ----->
 
-		<script src="js/bootstrap.min.js"></script>
-		<!---- Boostrap js link local ----->
-		
-		<link rel="icon" href="images/icon.png" type="image/x-icon" />
-		<!---- Icon link local ----->
-		
-	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-		<!---- Font awesom link local ----->
-	</head>
-	<body>
-	<div class="container-fluid">
-		<div class="container">
-			<h2 class="text-center" id="title">Facundo farm and Resort</h2>
-			 <p class="text-center">
-				<small id="passwordHelpInline" class="text-muted"> Developer: follow me on facebook <a href="https://www.facebook.com/JheanYu"> John niro yumang</a> inspired from <a href="https://p.w3layouts.com/">https://p.w3layouts.com/</a>.</small>
-			</p>
- 			<hr>
-			<div class="row">
-				<div class="col-md-5">
- 					<form role="form" method="post" action="register.php">
-						<fieldset>							
-							<p class="text-uppercase pull-center"> SIGN UP.</p>	
- 							<div class="form-group">
-								<input type="text" name="username" id="username" class="form-control input-lg" placeholder="username">
-							</div>
 
-							<div class="form-group">
-								<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
-							</div>
-							<div class="form-group">
-								<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
-							</div>
-								<div class="form-group">
-								<input type="password" name="password2" id="password2" class="form-control input-lg" placeholder="Password2">
-							</div>
-							<div class="form-check">
-								<label class="form-check-label">
-								  <input type="checkbox" class="form-check-input">
-								  By Clicking register you're agree to our policy & terms
-								</label>
-							  </div>
- 							<div>
- 									  <input type="submit" class="btn btn-lg btn-primary   value="Register">
- 							</div>
-						</fieldset>
-					</form>
-				</div>
-				
-				<div class="col-md-2">
-					<!-------null------>
-				</div>
-				
-				<div class="col-md-5">
- 				 		<form role="form">
-						<fieldset>							
-							<p class="text-uppercase"> Login using your account: </p>	
- 								
-							<div class="form-group">
-								<input type="email" name="username" id="username" class="form-control input-lg" placeholder="username">
-							</div>
-							<div class="form-group">
-								<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
-							</div>
-							<div>
-								<input type="submit" class="btn btn-md" value="Sign In">
-							</div>
-								 
- 						</fieldset>
-				</form>	
-				</div>
-			</div>
-		</div>
-		<p class="text-center">
-			<small id="passwordHelpInline" class="text-muted"> Developer:<a href="http://www.psau.edu.ph/"> Pampanga state agricultural university ?</a> BS. Information and technology students @2017 Credits: <a href="https://v4-alpha.getbootstrap.com/">boostrap v4.</a></small>
-		</p>
-	</div>
-	</body>
-	 
 
+
+                
+            };
+           
+            
+        </script>
+    
+    </body>
 </html>
