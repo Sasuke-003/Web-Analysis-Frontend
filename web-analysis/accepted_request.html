@@ -7,17 +7,37 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    * {
+      box-sizing:border-box;
+    }
+    .column{
+      float:left;
+      width:30%;
+      padding:10px;
+      height:300px;
+
+    }
+    .row:after{
+      content:"";
+      display:table;
+      clear:both;
+    }
+    
+  </style>
 </head>
 <body>
 
 <div class="container">
-  <h2 style="background-color: black;color: brown;">Accepted requests</h2>            
-  <table class="table table-bordered" style="border-collapse:separate;counter-increment: inherit;background-color: khaki;">
+  <h2 style="background-color: black;color: brown;">User Donation</h2>            
+  <table class="table table-bordered" style="border-collapse:separate;counter-increment: inherit;background-color: khaki;right: gap 50px;;">
     <thead>
       <tr>
         <th>Name</th>
         <th>E-mail</th>
         <th>Contact</th>
+        <th>Blood group</th>
+        <th>Date</th>
       </tr>
     </thead>
     <tbody style="row-gap: 50px">
@@ -38,7 +58,50 @@
       </tr>
     </tbody>
   </table>
-</div>
+  
+  
+  </div>
+  
+
+
+
+<div class="container">
+  <h2 style="background-color: black;color: brown;">User Donation</h2>            
+  <table class="table table-bordered" style="border-collapse:separate;counter-increment: inherit;background-color: khaki;right: gap 50px;;">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>E-mail</th>
+        <th>Contact</th>
+        <th>Blood group</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody style="row-gap: 50px">
+      <tr >
+        <td></td>
+        <td></td>
+        <td> </td><!--email-->
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  </div>
+  
+
+
+
 
 </body>
 </html>
