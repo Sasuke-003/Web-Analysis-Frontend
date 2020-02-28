@@ -1,11 +1,9 @@
 import React,{ Component } from "react";
 import axios from 'axios'
-class Login extends Component{
-	state = {
-		email:"",
-		password:null,
+import { connect } from 'react-redux'
 
-	}
+class Login extends Component{
+
 	
 	handleChange = (e) => {
 		this.setState({
@@ -14,6 +12,9 @@ class Login extends Component{
 	}
 	handleSubmit = (e) => {
 		e.preventDefault();
+		this.setState({
+			token : null
+		});
 		const  user  = {
 			email:this.state.email,
 			password:this.state.password
@@ -22,9 +23,11 @@ class Login extends Component{
 		axios.post("http://192.168.71.48:9999/user/login",user).then(res => {
 			if(res.data.code === 200 ){
 				this.setState({
-					token : res.data.data.token
+					token : res.data.data.token,
+					type: res.data.data.type
 				});
-				console.log(this.state.token);
+				this.props.adduser(res.data.data.token,res.data.data.type)
+				console.log(this.props.toke);
 			}	
 			else{
 				alert("Invalid Email or Password");
@@ -34,7 +37,7 @@ class Login extends Component{
 		})
 	}
     render() {
-        return(     
+		return(     
                 <div className="d-flex justify-content-center h-100">
 		        	<div className="card">
 		        		<div className="card-header">
@@ -63,8 +66,24 @@ class Login extends Component{
 					</div>  
 				</div>
 			</div>      
-        )
+		)
     }
 }
 
-export default Login;
+
+const mapStateToProps = (state) =>{
+	return{
+			token: state.token,
+			type: state.type
+	}
+		
+}
+
+
+const mapDispatchToProps = (dispatch) =>{
+	return{
+		adduser : (token,id) => { dispatch({type: 'ADD_TOKEN', token:token, id:id})}
+	}
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Login);

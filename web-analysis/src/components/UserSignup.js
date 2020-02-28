@@ -32,13 +32,18 @@ class UserSignup extends Component{
 		}
 		else
 		{
+			var min =0,max=100;
+			var lon = min + (Math.random() * (max-min));
+			var lat = min + (Math.random() * (max-min));
 			const  user  = {
 				name:this.state.username,
 				email:this.state.email,
 				contact:this.state.contact,
 				type:"d",
 				blood:this.state.blood,
-				password:this.state.password
+				password:this.state.password,
+				lon:lon,
+				lat:lat
 			};
 			this.setState({		
 				name: "",
