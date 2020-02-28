@@ -1,0 +1,26 @@
+#name1,#name2,#name3,#name4,#name5{
+    width: 400px;
+    height:30px;
+    font-family: 'Times New Roman';
+    font-style: bold;
+    font-size: 20px;
+}
+#submit1{
+    width: 100px;
+    height:50px;
+    background-color: orange;
+}
+ #container{
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+}
+body{
+    background-image: url('/Photos/crsl1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
