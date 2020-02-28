@@ -1,14 +1,11 @@
 const initState = {
-    token : null,
-    type : null
+    token : ''
 }
 
 const tokenreducer = (state = initState, action) =>{
     if(action.type === 'ADD_TOKEN'){
-       
         return {
-            token : action.token,
-            type:action.id
+            token : action.token
         }
     }
     

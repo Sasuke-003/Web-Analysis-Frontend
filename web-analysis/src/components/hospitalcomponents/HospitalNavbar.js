@@ -1,5 +1,5 @@
 import React,{ Component } from "react";
-import { Link, NavLink ,Switch } from 'react-router-dom'
+import { Link, NavLink  } from 'react-router-dom'
 import './hospitalnav.css'
 
 
@@ -11,16 +11,14 @@ class HospitalNavbar extends Component {
         document.getElementById("dh").style.backgroundColor = "#333";
         document.getElementById([e.target.id]).style.backgroundColor = "red";
     }
-    render(){
+    render(){ 
         return(
             <div class="topnav">
-  
-  <switch>
-    <Link to="/hospitalroot" onClick={this.onclick} id="dr">Donate Request</Link>
-    <Link to="/hospitalroot" onClick={this.onclick} id="ar">Accepted Request</Link>
-    <Link to="/hospitalroot" onClick={this.onclick} id="ir">Incoming Request</Link>
-    <Link to="/hospitalroot" onClick={this.onclick} id="dh">Donation History</Link>
-  </switch>
+    <Link  to="/hospitalroot/donaterequest" onClick={this.onclick} id="dr">Donate Request</Link>
+    <Link to="/hospitalroot/acceptedrequest" onClick={this.onclick} id="ar">Accepted Request</Link>
+    <Link to="/hospitalroot/incomingrequest" onClick={this.onclick} id="ir">Incoming Request</Link>
+    <Link to="/hospitalroot/donationhistory" onClick={this.onclick} id="dh">Donation History</Link>
+
 </div>
         )
     }

@@ -1,36 +1,53 @@
 import React,{ Component } from "react";
+import './History.css';
 
-class DonationRequest extends Component {
+class DonationHistory extends Component {
     render(){
         return(
+          <div>
             <div className="container">
-  <h2 style="background-color: black;color: brown;">User Donation</h2>            
-  <table className="table table-bordered" style="border-collapse:separate;counter-increment: inherit;background-color: khaki;right: gap 50px;;">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>E-mail</th>
-        <th>Contact</th>
-        <th>Blood group</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody style="row-gap: 50px">
-      <tr >
-        <td></td>
-        <td></td>
-        <td> </td><!--email-->
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-      </tr>
+              <h2 >Requested Donation</h2>            
+                <table className="table table-bordered" >
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Contact</th>
+                    <th>Blood group</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody >
+                  <tr >
+                  <td></td>
+                  <td></td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                  </tr>
+                  <tr >
+                  <td></td>
+                  <td></td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+            
+                  </tr>
+                  <tr >
+                  <td></td>
+                  <td></td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+            
+                  </tr>     <tr >
+                  <td></td>
+                  <td></td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+            
+                  </tr>
     </tbody>
   </table>
   
@@ -40,40 +57,48 @@ class DonationRequest extends Component {
 
 
 
-<div className="container">
-  <h2 style="background-color: black;color: brown;">User Donation</h2>            
-  <table className="table table-bordered" style="border-collapse:separate;counter-increment: inherit;background-color: khaki;right: gap 50px;;">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>E-mail</th>
-        <th>Contact</th>
-        <th>Blood group</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody style="row-gap: 50px">
+    <div className="container">
+      <h2 >User Donation</h2>            
+      <table className="table table-bordered" >
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>E-mail</th>
+          <th>Contact</th>
+          <th>Blood group</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+    <tbody >
       <tr >
         <td></td>
         <td></td>
-        <td> </td><!--email-->
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        
       </tr>
-      <tr>
+      <tr >
+        <td></td>
+        <td></td>
         <td> </td>
         <td> </td>
         <td> </td>
+        
       </tr>
-      <tr>
+      <tr >
+        <td></td>
+        <td></td>
         <td> </td>
         <td> </td>
         <td> </td>
+        
       </tr>
     </tbody>
   </table>
-  
-  
   </div>
-  
+  </div>
+
         )
     }
 }

@@ -3,7 +3,12 @@ import axios from 'axios'
 import { connect } from 'react-redux'
 
 class Login extends Component{
-
+state ={
+	email: "",
+	password:"",
+	token : "",
+	type : ""
+}
 	
 	handleChange = (e) => {
 		this.setState({
@@ -26,8 +31,13 @@ class Login extends Component{
 					token : res.data.data.token,
 					type: res.data.data.type
 				});
-				this.props.adduser(res.data.data.token,res.data.data.type)
-				console.log(this.props.toke);
+				console.log(this.props.token);
+				if(this.state.type ===  "h"){
+					window.location = "/hospitalroot/"+this.state.token;
+				}
+				else{
+					//window.location = "/hospitalroot/"+this.state.token;
+				}
 			}	
 			else{
 				alert("Invalid Email or Password");
@@ -70,20 +80,16 @@ class Login extends Component{
     }
 }
 
-
-const mapStateToProps = (state) =>{
-	return{
-			token: state.token,
-			type: state.type
-	}
-		
+const mapStateTOProps = (state) => {
+return state;
 }
+
 
 
 const mapDispatchToProps = (dispatch) =>{
 	return{
-		adduser : (token,id) => { dispatch({type: 'ADD_TOKEN', token:token, id:id})}
+		adduser : (token) => { dispatch({type: 'ADD_TOKEN', token:token})}
 	}
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Login);
+export default connect(mapStateTOProps,mapDispatchToProps)(Login);
